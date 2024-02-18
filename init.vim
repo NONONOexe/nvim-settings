@@ -50,3 +50,7 @@ let g:rustfmt_autosave = 1
 " インストールするCoc拡張機能
 let g:coc_global_extensions = ['coc-rust-analyzer']
 
+" 入力補完ウィンドウが出ているときにTab，Enterは候補の決定とする
+inoremap <silent><expr> <Tab>   coc#pum#visible() ? coc#pum#confirm() : "\<Tab>"
+inoremap <silent><expr> <Enter> coc#pum#visible() ? coc#pum#confirm() : "\<Enter>"
+
