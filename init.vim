@@ -18,15 +18,19 @@ set laststatus=2
 set list
 " 改行コードを$として表示
 set listchars=eol:$
+" 行をまたぐカーソルの移動を有効化
+set whichwrap=b,s,h,l,<,>,[,],~
 
-" vim-plugの設定
+" vim-plugでインストールするプラグイン
 call plug#begin('~/.vim/plugged')
 
 " ステータスラインの情報を充実させるプラグイン
 Plug 'itchyny/lightline.vim'
 " レトロ調のカラースキーム
 Plug 'habamax/vim-gruvbit'
-" IDEのようなコード保管機能を提供するプラグイン
+" Rustに関する設定が可能になるプラグイン
+Plug 'rust-lang/rust.vim'
+" 入力補完機能を有効化するためのプラグイン
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 call plug#end()
@@ -39,4 +43,10 @@ let g:lightline = {
 " gruvbitによるカラースキーマの設定
 set termguicolors
 colorscheme gruvbit
+
+" 保存時に自動でrustfmtによりコードをフォーマットする
+let g:rustfmt_autosave = 1
+
+" インストールするCoc拡張機能
+let g:coc_global_extensions = ['coc-rust-analyzer']
 
