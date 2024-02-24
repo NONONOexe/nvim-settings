@@ -32,6 +32,8 @@ Plug 'habamax/vim-gruvbit'
 Plug 'rust-lang/rust.vim'
 " 入力補完機能を有効化するためのプラグイン
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+" 括弧などを入力したときに閉じ括弧など対応する文字を自動入力してくれるプラグイン
+Plug 'cohama/lexima.vim'
 
 call plug#end()
 
