@@ -11,6 +11,12 @@ vim.opt.expandtab = true
 -- Enter a tab as 2 space characters
 vim.opt.tabstop = 2
 
+-- Shift by 2 space characters when indented
+vim.opt.shiftwidth = 2
+
+-- Round the indents to multiple of shiftwidth
+vim.opt.shiftround = true
+
 -- Show line numbers
 vim.opt.number = true
 
